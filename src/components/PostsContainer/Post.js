@@ -1,6 +1,6 @@
 // You will add code in this file
 
-import React from "react";
+import React, {useState} from "react";
 import CommentSection from "../CommentSection/CommentSectionContainer";
 import LikeSection from "./LikeSection";
 import PostHeader from "./PostHeader";
@@ -9,7 +9,8 @@ import "./Posts.css";
 
 const Post = props => {
   // set up state for the likes
-console.log("post", props)
+  const[likes, setLikes] = useState(props.post.likes)
+console.log("likes", likes)
   return (
     <div className="post-border">
       <PostHeader
@@ -25,7 +26,7 @@ console.log("post", props)
           src={props.post.imageUrl}
         />
       </div>
-      <LikeSection likes ={props.post.likes} />
+      <LikeSection likes = {likes} setLikes = {setLikes} />
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}
