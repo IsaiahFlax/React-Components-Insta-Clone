@@ -16,7 +16,7 @@ console.log("comment state", commentState)
           <Comment comment = {x} />
         )
       })}
-      <CommentInput />
+      <CommentInput newComment = {newCommentState}/>
     </div>
   );
 };

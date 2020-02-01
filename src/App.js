@@ -20,7 +20,7 @@ const App = () => {
   return (
     <div className="App">
       <SearchBar />
-      <PostsPage props = {userInfo}/>
+      <PostsPage props = {userInfo} setUserInfo = {setUserInfo}/>
       
             
     </div>
